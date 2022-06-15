@@ -21,7 +21,7 @@ div {
 
 main {
 
-    background-color: rgb(139,133,223)
+    background-color: rgb(139,133,223);
 }
 
 section {
@@ -34,11 +34,17 @@ section {
 
     width: 90%;
     margin: auto;
+
 }
 
 .card {
 
     padding: 20px;
+}
+
+.wu-in .card {
+
+    background-color: white;
 }
 
 
@@ -93,6 +99,27 @@ SERVICES
     height: 200px;
 }
 
+.test-c.card {
+
+    display: flex;
+    align-items:  center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+
+    background-color:rgb(139,133,223);
+}
+.tes-i {
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+    width: 30%;
+
+    
+}
+
 
 /***************************************************
 SERVICES
@@ -105,6 +132,16 @@ SERVICES
     padding: 40px 0px;
 
 }
+
+#testimonial {
+
+    text-align: center;
+    padding: 40px 0px;
+}
+
+/***************** TESTIMONIALS ****************/
+
+
 
 
 
@@ -165,8 +202,40 @@ RESPONSIVE
         flex-direction: row;
     }
 
+    /*********************/
 
-    h1, h2, h3, p {
+    .test-c.card {
+
+        flex-direction: row;
+        text-align: left;
+        font-size: 0.8em;
+    }
+
+    .tes-i {
+
+        width: 400px;
+        margin-right: 30px;
+    }
+
+    /*********************/
+
+    /*********************/
+
+    .wu-in {
+
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%
+    }
+
+    .wu-in .card {
+
+        width: calc(95% / 2);
+        margin: 10px;
+    }
+    /********************/
+
+    h1, h2, h3, h4, p {
 
         font-size: 1.5em;
     }
@@ -247,7 +316,40 @@ RESPONSIVE
         width: 100%;
     }
 
- 
+     /*********************/
+
+     .test-c.card {
+
+        flex-direction: row;
+        text-align: left;
+        font-size: 0.8em;
+    }
+
+    .tes-i {
+
+        width: 400px;
+        height: 200px;
+        margin-right: 30px;
+    }
+
+    /*********************/
+
+     /*********************/
+
+     .wu-in {
+
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%
+    }
+
+    .wu-in .card {
+
+        width: calc(95% / 3);
+        margin: 10px;
+    }
+    /********************/
+
 
 
     h1, h2, h3, p {
