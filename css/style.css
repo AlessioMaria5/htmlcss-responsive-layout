@@ -19,10 +19,28 @@ div {
     background-color: white;
 }
 
-section {
+main {
 
     background-color: rgb(139,133,223)
 }
+
+section {
+
+    width: 100%;
+}
+
+
+.container {
+
+    width: 90%;
+    margin: auto;
+}
+
+.card {
+
+    padding: 20px;
+}
+
 
 /***************************************************
 HEADER 
@@ -61,20 +79,16 @@ SERVICES
 
 .card {
 
-    width: 100%;
     background-color: rgb(168,216,255);
-    text-align: center;
     margin: 20px 0px; 
 }
 
 .cards {
 
-    width: 90%;
-    margin: auto;
     padding: 25px 0px;
 }
 
-.card.big .cb-in:last-child {
+.cb-img {
 
     height: 200px;
 }
@@ -87,7 +101,9 @@ SERVICES
 
 #plan {
 
-    height: 100px;
+
+    padding: 40px 0px;
+
 }
 
 
@@ -98,84 +114,147 @@ SERVICES
 RESPONSIVE
 **************************************************/
 
-/* @media screen and ( min-width:995px) {
+@media screen and (min-width:481px) and (max-width: 997px) {
 
- 
     .cards {
 
-        width: 100%;
         display: flex;
-        flex-wrap: nowrap;
         flex-direction: column;
-        margin-top: 20px;
+        background-color: yellow;
+        width: 100%;
     }
 
+    .cards .card {
+
+        margin: 10px;
+    }
+
+    .cr-2 .card {
+
+        width: calc(100% / 3 );
+        
+    }
 
     .cr-1 {
 
+        width: 100%;
         display: flex;
         flex-direction: row;
-        width: 100%;
+    }
+
+    .cr-1 .card.big {
+
+       width: 66.6666%;
+       text-align: left;
+    }
+
+    .cr-1 .card.big .cb-img {
+
+        width: 50%;
+    }
+
+    .cr-1 .card {
+
+        width: 33.3333%;
     }
 
     .cr-2 {
 
+        
         display: flex;
         flex-direction: row;
-        width: calc(100% / 3);
+    }
+
+
+    h1, h2, h3, p {
+
+        font-size: 1.5em;
+    }
+}
+
+@media screen and ( min-width:998px) and (max-width:2100px) {
+
+    .cards {
+
+        display: flex;
+        flex-direction: column;
+        background-color: yellow;
         width: 100%;
     }
 
+    .cards .card {
 
-    .card {
-
-        background-color: rgb(168,216,255);
-        margin: 10px 10px;
-        width: calc(100% / 3);
-        padding: 15px;
-        text-align: center;
+        margin: 10px;
     }
 
-    .card.big {
+    .cr-2 .card {
 
-        width: 70%;
-    }
-
-    .cb-in {
-
-        text-align: left;
-        padding-right: 30px;
-    
-    }
-
-    .cb-in.cb-img {
-
-        width: 200px;
-        height: 200px;
-    
+        width: calc(100% / 3 );
         
     }
- */
 
-    
-}
+    .cr-1 {
 
-
-@media screen and (min-width:996px) {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
 
     .card.big {
 
         display: flex;
     }
 
-    .card.big div:last-child {
+    .cr-1 .card.big {
 
-
-        margin-bottom: -15px;
-
-        
+       width: 66.6666%;
+       text-align: left;
     }
 
+    .cr-1 .card.big .cb-img {
+
+        width: 50%;
+    }
+
+    .cr-1 .card {
+
+        width: 33.3333%;
+    }
+
+    .cr-2 {
+
+        
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .in-plan {
+
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .in-plan .card {
+
+        text-align: center;
+        height: 50%;
+    }
+
+    .plan-ls {
+
+        margin: 20px;
+        width: 100%;
+    }
+
+ 
+
+
+    h1, h2, h3, p {
+
+        font-size: 1.5em;
+    }
 }
 
 
+}
