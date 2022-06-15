@@ -111,14 +111,36 @@ SERVICES
 }
 .tes-i {
 
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
     background-color: red;
-    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    
+    width: 100px;
+    height: 100px;
+
 }
+
+.tes-i img {
+
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+.test-c.card .tes-i{
+
+    width: 100px;
+    height:100px;
+}
+
+.test-c.card .tes-d {
+
+    width: 70%;
+}
+
+
 
 
 /***************************************************
@@ -139,6 +161,46 @@ SERVICES
     padding: 40px 0px;
 }
 
+#free {
+
+    text-align: center;
+}
+
+.copyright ul {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright ul li {
+
+    margin-right: 20px;
+}
+
+.copyright ul li:first-child {
+
+    list-style: none;
+}
+
+footer {
+
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: 0.8em;
+}
+
+footer .container {
+
+    width: 40%;
+    padding-top: 50px;
+}
+
+footer p {
+
+    padding-bottom: 50px;
+}
 /***************** TESTIMONIALS ****************/
 
 
@@ -151,7 +213,7 @@ SERVICES
 RESPONSIVE
 **************************************************/
 
-@media screen and (min-width:481px) and (max-width: 997px) {
+@media screen and (min-width:588px) and (max-width: 997px) {
 
     .cards {
 
@@ -213,9 +275,18 @@ RESPONSIVE
 
     .tes-i {
 
-        width: 400px;
-        margin-right: 30px;
+        width: 100px;
+        height: 100px;
+    
     }
+
+    .test-c.card .tes-i{
+
+        width: 200px;
+        height:200px;
+    }
+
+
 
     /*********************/
 
@@ -223,17 +294,39 @@ RESPONSIVE
 
     .wu-in {
 
-        display: flex;
+        display: inline-flex;
+        flex-direction: row;
         flex-wrap: wrap;
         width: 100%
     }
 
     .wu-in .card {
 
-        width: calc(95% / 2);
+        width: calc( 100% / 2 - 20px );
         margin: 10px;
+
     }
     /********************/
+
+    /*******************/
+
+    .abt-in {
+
+        display: flex;
+    }
+
+    .abt-p {
+
+        width: 30%;
+    }
+
+    .abt-d {
+
+        width: 70%;
+    }
+
+    /********************/
+    
 
     h1, h2, h3, h4, p {
 
@@ -241,13 +334,18 @@ RESPONSIVE
     }
 }
 
-@media screen and ( min-width:998px) and (max-width:2100px) {
+@media screen and ( min-width:998px) {
+
+    .container {
+
+        width: 70%;
+    }
 
     .cards {
 
         display: flex;
         flex-direction: column;
-        background-color: yellow;
+
         width: 100%;
     }
 
@@ -325,12 +423,14 @@ RESPONSIVE
         font-size: 0.8em;
     }
 
-    .tes-i {
+    .test-c.card .tes-i{
 
-        width: 400px;
-        height: 200px;
-        margin-right: 30px;
+        width: 200px;
+        height:200px;
     }
+
+
+
 
     /*********************/
 
@@ -345,9 +445,28 @@ RESPONSIVE
 
     .wu-in .card {
 
-        width: calc(95% / 3);
+        width: calc(100% / 3 - 20px);
         margin: 10px;
     }
+    /********************/
+
+       /*******************/
+
+    .abt-in {
+
+        display: flex;
+    }
+
+    .abt-p {
+
+        width: 30%;
+    }
+
+    .abt-d {
+
+        width: 70%;
+    }
+
     /********************/
 
 
@@ -356,7 +475,4 @@ RESPONSIVE
 
         font-size: 1.5em;
     }
-}
-
-
 }
