@@ -5,6 +5,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
+    scroll-behavior: smooth;
 }
 
 
@@ -53,7 +55,7 @@ div {
 
 main {
 
-    background-color: rgb(139,133,223);
+    background-color: rgb(149,148,224);
 }
 
 section {
@@ -82,8 +84,13 @@ section {
     text-align: center;
     background-color: rgb(0,119,252);
     padding: 10px 60px;
-    
 
+}
+
+.btn:hover {
+
+    background-color: rgba( 0,0,0,0.5);
+    translate: background-color: red 2s;
 }
 
 /***************************************************
@@ -95,6 +102,12 @@ header {
     background-color: rgb(0,119,252);
     height: 80px;
     color: white;
+
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 
@@ -130,14 +143,16 @@ header ul {
 
 }
 
-header ul li {
+header ul a {
 
     margin-left: 20px;
+    text-decoration: none;
+    color: white;
 }
 
 
 
-header ul li:last-child {
+header ul a:last-child {
 
     color: black;
     background-color: white;
@@ -153,6 +168,11 @@ HEADER
 /***************************************************
 SERVICES
 **************************************************/
+
+#svc {
+
+    padding-top: 80px;
+}
 #svc h2 {
 
     color: rgb(0,119,252);
@@ -259,12 +279,26 @@ SERVICES
 
 .cb-in.cb-img img {
 
-    object-fit: scale-down;
-    width: 100%;
+    object-fit: contain;
     height: 100%;
     
 }
 
+.plan-ls.card .cb-img img , .plan-ls .cb-img img {
+
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.plan-ls.card .cb-img, .plan-ls .cb-img {
+
+    width: 50%;
+    height: 50%;
+    margin: auto;
+
+
+}
 .card.big {
 
     display: flex;
@@ -293,7 +327,7 @@ SERVICES
 
 #plan {
 
-    padding: 40px 0px;
+    padding: 40px 0px 10px 0px;
 
 }
 
@@ -323,6 +357,16 @@ SERVICES
     border-radius: 50%;
 }
 
+.plan-ls p:last-child {
+
+    padding-bottom: 50px;
+}
+
+.plan-ls .cb-img {
+
+    width: 100%;
+    margin: 0;
+}
 
 /*********** PLAN *********/
 
@@ -516,7 +560,7 @@ footer {
 
     text-align: center;
     color: white;
-    background-color: black;
+    background-color: rgb(45,45,45);
     font-size: 0.8em;
 }
 
@@ -538,6 +582,10 @@ footer p:nth-of-type(2) {
     margin: auto;
 }
 
+footer a:link , footer a:visited {
+
+    color: rgb(139,133,223);
+}
 /************* FOOTER *********/ 
 
 /***************** DEFAULT RULES ****************/
@@ -548,7 +596,7 @@ footer p:nth-of-type(2) {
 
 
 /***************************************************
-RESPONSIVE
+RESPONSIVE TABLET 
 **************************************************/
 
 @media screen and (min-width:588px) and (max-width: 997px) {
@@ -584,10 +632,6 @@ RESPONSIVE
        text-align: left;
     }
 
-    .cr-1 .card.big .cb-img {
-
-        width: 50%;
-    }
 
     .cr-1 .card {
 
@@ -680,6 +724,14 @@ RESPONSIVE
     }
 }
 
+/***************************************************
+RESPONSIVE TABLET 
+**************************************************/
+
+/***************************************************
+RESPONSIVE LAPTOP + 
+**************************************************/
+
 @media screen and ( min-width:998px) {
 
     .nav-list {
@@ -726,7 +778,32 @@ RESPONSIVE
     .card.big {
 
         display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        padding-bottom: 0;
         
+    }
+
+   
+
+    .card.big .cb-in h2 {
+
+        text-align: left;
+        padding-top: 0px;
+    }
+
+    .card.big .cb-in {
+
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .cr-1 .card.big .cb-in:first-child {
+
+        width: 90%;
     }
 
     .cr-1 .card.big {
@@ -826,10 +903,12 @@ RESPONSIVE
 
     /********************/
 
-
-
     h1, h2, h3 {
 
         font-size: 1.5em;
     }
 }
+
+/***************************************************
+RESPONSIVE LAPTOP + 
+**************************************************/
