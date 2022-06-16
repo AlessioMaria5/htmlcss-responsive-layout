@@ -7,10 +7,6 @@
     box-sizing: border-box;
 }
 
-h1 {
-
-    font-family: 'Raleway', sans-serif;
-}
 
 h2, h3, h4, h5, h6, p, div {
 
@@ -19,6 +15,13 @@ h2, h3, h4, h5, h6, p, div {
     margin: 20px 0px;
  
 }
+
+
+h1 {
+
+    font-family: 'Raleway', sans-serif;
+}
+
 
 h3 {
 
@@ -83,15 +86,6 @@ section {
 
 }
 
-
-.wu-in .card {
-
-    background-color: white;
-}
-
-
-
-
 /***************************************************
 HEADER 
 **************************************************/
@@ -119,6 +113,38 @@ nav {
     text-decoration: none;
 }
 
+.mn-1 {
+
+    font-size: 30px;
+}
+.nav-list {
+
+    display: none;
+}
+header ul {
+
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+
+}
+
+header ul li {
+
+    margin-left: 20px;
+}
+
+
+
+header ul li:last-child {
+
+    color: black;
+    background-color: white;
+
+    padding: 0px 20px;
+    border-radius: 20px;
+}
 
 /***************************************************
 HEADER 
@@ -356,6 +382,13 @@ SERVICES
 
     background-color: rgb(139,133,223);
 }
+
+
+.wu-in .card {
+
+    background-color: white;
+}
+
 /*********** WITH US *********/
 
 /************* ABOUT *********/ 
@@ -648,6 +681,16 @@ RESPONSIVE
 }
 
 @media screen and ( min-width:998px) {
+
+    .nav-list {
+
+        display: block;
+    }
+
+    .mn-1 {
+
+        display: none;
+    }
 
     .container {
 
